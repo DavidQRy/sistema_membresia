@@ -1,0 +1,192 @@
+
+    :root {
+        --sidebar-bg: #1e293b;  
+        --main-bg: #f8fafc;     
+        --card-bg: #ffffff;     
+        --accent-color2: #3b82f6;
+        --accent-color:#10b981/*#e94560*/;
+        --text-dark: #1e293b;   
+        --text-light: #64748b;  
+        --border-color: #e2e8f0;
+        --footer-bg: #1e293b;
+    }
+    
+    body {
+        background-color: var(--main-bg);
+        color: var(--text-dark);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    
+    .wrapper {
+        display: flex;
+        flex: 1;
+    }
+    
+    .sidebar {
+        background: var(--sidebar-bg);
+        color: white;
+        border-right: 1px solid var(--border-color);
+        min-width: 250px;
+    }
+    
+    .sidebar .nav-link {
+        color: rgba(255, 255, 255, 0.8);
+        border-radius: 5px;
+        margin: 2px 0;
+        transition: all 0.3s;
+    }
+    
+    .sidebar .nav-link:hover, 
+    .sidebar .nav-link.active {
+        color: white;
+        background: var(--accent-color);
+        transform: translateX(5px);
+    }
+    
+    .sidebar .nav-link i {
+        width: 20px;
+        text-align: center;
+        margin-right: 10px;
+    }
+    
+    .main-content {
+        flex: 1;
+        padding: 2rem;
+        background-color: var(--main-bg);
+    }
+    
+    .stat-card {
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        background-color: var(--card-bg);
+    }
+    
+    .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        border-color: var(--accent-color);
+    }
+    
+    .user-avatar {
+        border: 3px solid var(--accent-color);
+        box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+    }
+    
+    .border-bottom {
+        border-bottom: 1px solid var(--border-color) !important;
+    }
+    
+    .list-group-item {
+        background-color: var(--card-bg);
+        color: var(--text-dark);
+        border-color: var(--border-color);
+        transition: all 0.3s;
+    }
+    
+    .list-group-item:hover {
+        background-color: #f1f5f9;
+        border-left: 3px solid var(--accent-color);
+    }
+    
+    .card {
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+    
+    .card-header {
+        background-color: var(--card-bg);
+        border-bottom: 1px solid var(--border-color);
+        color: var(--text-dark);
+    }
+    
+    .btn-primary {
+        background-color: var(--accent-color2);
+        border-color: var(--accent-color);
+    }
+    
+    .btn-primary:hover {
+        background-color: #2563eb;
+        border-color: #2563eb;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(59, 130, 246, 0.2);
+    }
+    
+    .badge.bg-danger {
+        background-color: var(--accent-color) !important;
+    }
+    
+    .bg-primary {
+        background-color: var(--accent-color2) !important;
+    }
+    
+    .bg-success {
+        background-color: #10b981 !important;
+    }
+    
+    .bg-warning {
+        background-color: #f59e0b !important;
+    }
+    
+    .text-muted {
+        color: var(--text-light) !important;
+    }
+    
+    /* Footer styles */
+    footer {
+        background-color: var(--footer-bg);
+        color: white;
+        padding: 2rem 0;
+        margin-top: auto;
+        border-bottom: solid 4px  #10b981;
+        border-top: solid 4px  #10b981;
+    }
+    
+    .footer-section h5 {
+        color: var(--accent-color);
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+    }
+    
+    .footer-link {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: color 0.3s;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-link:hover {
+        color: var(--accent-color);
+    }
+    
+    .social-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        margin-right: 0.5rem;
+        transition: all 0.3s;
+    }
+    
+    .social-icon:hover {
+        background-color: var(--accent-color);
+        transform: translateY(-3px);
+    }
+    
+    .copyright {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 1.5rem;
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.6);
+    }
