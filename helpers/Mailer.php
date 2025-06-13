@@ -12,13 +12,13 @@ class Mailer {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'davidgui393@gmail.com';
-            $mail->Password = 'ehnh wocn ccyd qpti';
+            $mail->Username = 'example@gmail.com';
+            $mail->Password = '**** **** **** ****';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port = 465;
             
             // Remitente y destinatario
-            $mail->setFrom('davidgui393@gmail.com', 'Sistema de Membresía');
+            $mail->setFrom('example@gmail.com', 'Sistema de Membresía');
             $mail->addAddress($destinatario);
             
             $mail->CharSet = 'UTF-8'; // Asegurar soporte para caracteres especiales
@@ -132,13 +132,13 @@ class Mailer {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'davidgui393@gmail.com';
-            $mail->Password = 'ehnh wocn ccyd qpti';
+            $mail->Username = 'example@gmail.com';
+            $mail->Password = '**** **** **** ****';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port = 465;
             
             // Remitente y destinatario
-            $mail->setFrom('davidgui393@gmail.com', 'Sistema de Membresía');
+            $mail->setFrom('example@gmail.com', 'Sistema de Membresía');
             $mail->addAddress($destinatario);
             
             $mail->CharSet = 'UTF-8'; // Asegurar soporte para caracteres especiales
