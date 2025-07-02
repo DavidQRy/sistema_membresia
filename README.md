@@ -1,171 +1,70 @@
-﻿# sistema_membresia
-Sistema de Gestión de Membresías y Usuarios
-https://img.shields.io/badge/PHP-8.0+-777BB4?logo=php&logoColor=white
-https://img.shields.io/badge/MySQL-8.0+-4479A1?logo=mysql&logoColor=white
-https://img.shields.io/badge/Bootstrap-5.2+-7952B3?logo=bootstrap&logoColor=white
+# Sistema de Gestión de Membresías y Usuarios
 
-Descripción del Sistema
-Sistema robusto de gestión de membresías con autenticación segura, control de roles y administración de documentos. Diseñado con arquitectura MVC en PHP, ofrece experiencias diferenciadas para administradores, miembros e invitados con funcionalidades adaptadas a cada perfil.
+![PHP](https://img.shields.io/badge/PHP-8.0+-777BB4?logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-8.0+-4479A1?logo=mysql&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.2+-7952B3?logo=bootstrap&logoColor=white)
+![jQuery](https://img.shields.io/badge/jQuery-3.6+-0769AD?logo=jquery&logoColor=white)
+![Chart.js](https://img.shields.io/badge/Chart.js-3.7+-FF6384?logo=chartdotjs&logoColor=white)
 
-Características Principales
-🔐 Autenticación y Roles
-Login/Registro seguro con validación de datos y hash bcrypt
+## 📌 Descripción
+Sistema de gestión de membresías con autenticación segura, control de roles por jerarquía, administración de documentos y dashboard interactivo. Desarrollado con arquitectura MVC en PHP.
 
-Sistema de roles jerárquico:
+## ✨ Características Principales
 
-👑 Administrador: Acceso completo al sistema
+### 🔐 Autenticación y Roles
+- **Login/Registro seguro** con validación y hash bcrypt
+- **Sistema de roles**:
+  - 👑 Administrador: Acceso completo (CRUD usuarios, reportes)
+  - 👥 Miembro: Gestión de perfil y documentos
+  - 🎭 Invitado: Solo autenticación básica
 
-👥 Miembros: Gestión de perfil y documentos
+### 📊 Dashboard Interactivo
+- Gráficos con Chart.js (usuarios activos, solicitudes)
+- Búsqueda y paginación en tablas
+- Filtros avanzados para reportes
 
-🎭 Invitados: Registro y autenticación básica
+### 📄 Gestión Documental
+- Subida de CVs (PDF/DOCX) con validación
+- Almacenamiento seguro con nombres únicos
+- Previsualización de documentos
 
-📊 Dashboard Interactivo
-Gráficos estadísticos con Chart.js
+### ✉️ Comunicaciones
+- PHPMailer para:
+  - Confirmación de registro
+  - Recuperación de contraseña
+  - Notificaciones del sistema
 
-Visualización de métricas clave:
+## 🛠 Tecnologías
 
-Usuarios activos
+### Backend
+- PHP 8.0+ (POO + MVC)
+- MySQL 8.0+
+- PHPMailer
 
-Solicitudes pendientes
+### Frontend
+- HTML5, CSS3, JavaScript
+- Bootstrap 5.2+
+- jQuery 3.6+
+- Chart.js
 
-Actividad reciente
+### Herramientas
+- Composer
+- Git
 
-📄 Gestión Documental
-Subida segura de hojas de vida (CV)
+## ⚙️ Requisitos
 
-Validación de formatos (PDF, DOCX) y tamaño
+### Servidor
+- PHP ≥ 8.0
+- MySQL ≥ 8.0 o MariaDB ≥ 10.3
+- Extensiones: PDO, OpenSSL, MBstring
+- Apache/Nginx
 
-Almacenamiento con nombres únicos
+### Cliente
+- Navegador moderno
 
-Control de acceso por roles
+## 🚀 Instalación
 
-✉️ Comunicaciones
-Envío de emails con PHPMailer:
-
-Confirmación de registro
-
-Recuperación de contraseña
-
-Notificaciones del sistema
-
-Tecnologías Utilizadas
-Backend
-PHP 8.0+ (Programación Orientada a Objetos)
-
-Arquitectura MVC
-
-MySQL 8.0+ (Base de datos relacional)
-
-PHPMailer (Envío de correos electrónicos)
-
-Frontend
-HTML5, CSS3, JavaScript ES6+
-
-Bootstrap 5.2+ (Diseño responsive)
-
-jQuery 3.6+ (AJAX, manipulaciones DOM)
-
-Chart.js (Visualización de datos)
-
-Herramientas
-Composer (Gestión de dependencias)
-
-Git (Control de versiones)
-
-XAMPP/WAMP (Entorno de desarrollo)
-
-Requisitos del Sistema
-Servidor
-PHP 8.0 o superior
-
-MySQL 8.0 o MariaDB 10.3+
-
-Extensiones PHP: PDO, OpenSSL, MBstring
-
-Servidor web (Apache/Nginx)
-
-Cliente
-Navegador moderno (Chrome, Firefox, Edge, Safari)
-
-Instalación
-Clonar repositorio:
-
-bash
-git clone https://github.com/tu-usuario/sistema-membresias.git
+```bash
+git clone https://github.com/DavidQRy/sistema_membresia.git
 cd sistema-membresias
-Instalar dependencias:
-
-bash
 composer install
-Configurar base de datos:
-
-Crear DB en MySQL
-
-Importar database/dump.sql
-
-Configurar credenciales en config/database.php
-
-Configurar email (PHPMailer):
-
-php
-// config/mail.php
-define('SMTP_HOST', 'smtp.tudominio.com');
-define('SMTP_USER', 'tu@email.com');
-define('SMTP_PASS', 'tu-contraseña');
-Iniciar servidor:
-
-bash
-php -S localhost:8000 -t public
-Estructura del Proyecto
-text
-sistema-membresias/
-├── app/
-│   ├── controllers/      # Lógica de controladores
-│   ├── models/          # Modelos de datos
-│   └── views/           # Plantillas PHP
-├── config/
-│   ├── database.php     # Config DB
-│   └── mail.php        # Config email
-├── public/
-│   ├── assets/          # CSS, JS, imágenes
-│   ├── uploads/         # Documentos subidos
-│   └── index.php       # Punto de entrada
-├── vendor/              # Dependencias Composer
-└── README.md           # Este archivo
-Credenciales de Prueba
-Administrador:
-
-Email: admin@sistema.com
-
-Contraseña: Admin1234!
-
-Miembro:
-
-Email: miembro@ejemplo.com
-
-Contraseña: Miembro123!
-
-Seguridad Implementada
-✅ Hash bcrypt para contraseñas
-
-✅ Protección contra CSRF (tokens en formularios)
-
-✅ Sanitización de inputs contra XSS
-
-✅ Control de acceso por roles (middleware)
-
-✅ Nombres únicos para archivos subidos
-
-✅ Validación estricta de tipos de archivo
-
-Licencia
-Este proyecto está bajo licencia MIT. Consulte el archivo LICENSE para más detalles.
-
-Soporte y Contacto
-Para reportar issues o solicitar características:
-
-📧 Email: soporte@tudominio.com
-
-🌐 Sitio web: www.tudominio.com
-
-🐙 Issues en GitHub: github.com/tu-usuario/sistema-membresias/issues
